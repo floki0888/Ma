@@ -1,0 +1,472 @@
+/*
+ * Styles for Madelyn Beaufils one‑page website
+ * Created by ChatGPT
+ */
+
+:root {
+  --primary-color: #d16ba5; /* vibrant pink for highlights */
+  --secondary-color: #86a8e7; /* soft blue accent */
+  --dark-color: #0a0f24; /* deep navy background */
+  --light-color: #ffffff;
+  --text-dark: #2d2d2d;
+  --text-light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background: var(--light-color);
+  color: var(--text-dark);
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+header .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+header .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 15, 36, 0.4) 0%,
+    rgba(10, 15, 36, 0.75) 60%
+  );
+  z-index: -1;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 20;
+}
+
+nav .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+nav .logo span {
+  color: var(--primary-color);
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav .nav-links li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav .nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+nav .nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  background: var(--text-light);
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.hamburger span::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+}
+
+.hamburger span::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  background: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c4518e;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+/* About section */
+#about {
+  background: var(--light-color);
+}
+
+#about .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#about .text {
+  flex: 1 1 350px;
+}
+
+#about .text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+#about .text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+#about .image {
+  flex: 1 1 350px;
+}
+
+#about .image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Demos section */
+#demos {
+  background: #fafafa;
+}
+
+#demos h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+#demos .demos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#demos .demo-item {
+  flex: 1 1 300px;
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+#demos .demo-item h3 {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--dark-color);
+}
+
+#demos .demo-item p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-top: 0.5rem;
+}
+
+#demos .demo-item img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Services section */
+#services {
+  background: var(--light-color);
+}
+
+#services h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+#services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#services .service {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+#services .service i {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.7rem;
+}
+
+#services .service h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+#services .service p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+/* Contact section */
+#contact {
+  background: #fafafa;
+}
+
+#contact h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+#contact .contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#contact .contact-details {
+  flex: 1 1 300px;
+  font-size: 1rem;
+}
+
+#contact .contact-details p {
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+}
+
+#contact .contact-details a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact .contact-details a:hover {
+  color: #c4518e;
+}
+
+#contact form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#contact form textarea {
+  resize: vertical;
+}
+
+#contact form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 30px;
+  background: var(--primary-color);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact form button:hover {
+  background: #c4518e;
+}
+
+footer {
+  background: var(--dark-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background: rgba(10, 15, 36, 0.95);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  nav .nav-links.open {
+    display: flex;
+  }
+  nav .nav-links li a {
+    color: var(--text-light);
+  }
+  .hamburger {
+    display: flex;
+  }
+  #about .container,
+  #contact .contact-container {
+    flex-direction: column;
+  }
+  #demos .demo-item img {
+    height: 150px;
+  }
+}
