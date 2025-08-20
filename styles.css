@@ -25,6 +25,25 @@ body {
   color: var(--text-dark);
 }
 
+/* Intro section */
+#intro {
+  background: #fafafa;
+  padding: 3rem 2rem;
+}
+
+#intro .intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+#intro .intro-container p {
+  margin: 0;
+}
+
 header {
   position: relative;
   height: 100vh;
@@ -287,6 +306,34 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Media section alias for demos (id changed to media) */
+#media {
+  background: #fafafa;
+}
+#media h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+#media .demos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#media .demo-item {
+  flex: 1 1 300px;
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
 /* Services section */
 #services {
   background: var(--light-color);
@@ -337,6 +384,176 @@ section {
   font-size: 0.95rem;
   color: var(--text-dark);
   line-height: 1.4;
+}
+
+/* Services subheading and packages */
+.subheading {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 3rem 0 1rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.package {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.package h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.package p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+/* Events section */
+#events {
+  background: var(--light-color);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#events h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.event {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.event i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.event h3 {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+/* Testimonials section */
+#testimonials {
+  background: #fafafa;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#testimonials h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.testimonial span {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* HubSpot form styling */
+#contact .hubspot-form {
+  flex: 1 1 300px;
+}
+
+/* Adjust contact section heading */
+#contact h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+/* Adjust contact container for new form */
+#contact .contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  #intro {
+    padding: 2.5rem 1.5rem;
+  }
+  .subheading {
+    font-size: 1.7rem;
+    margin: 2rem 0 1rem;
+  }
 }
 
 /* Contact section */
